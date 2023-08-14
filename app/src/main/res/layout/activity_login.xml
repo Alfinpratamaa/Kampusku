@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="14dp"
+    tools:context=".LoginActivity"
+    android:background="@drawable/main_bg">
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/applogo"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivLogo"
+        android:textSize="28sp"
+        android:layout_marginStart="119dp"
+        android:text="Kampusku"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginTop="-40dp"/>
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/ivLogo"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="20dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiUsernameLayout"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvText"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:startIconDrawable="@drawable/ic_person_gray"
+        app:helperText="*Required"
+        app:helperTextTextColor="#CA0404"
+        app:endIconMode="clear_text"
+        app:boxStrokeColor="@color/primary"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray"
+            android:hint="username"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:startIconDrawable="@drawable/ic_lock_gray"
+        android:layout_below="@id/tiUsernameLayout"
+        android:id="@+id/tiPasswordLayout"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        app:helperText="*Required"
+        app:helperTextTextColor="#CA0404"
+        app:endIconMode="password_toggle"
+        app:boxStrokeColor="@color/primary"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray"
+            android:hint="password"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_below="@id/tiPasswordLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/black"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/tvRegisterHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="don't have an account?"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:layout_below="@id/buttonLogin"/>
+    <Button
+    android:id="@+id/buttonToRegister"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:layout_below="@id/tvRegisterHere"
+    android:layout_centerHorizontal="true"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+        android:textColor="@color/black"
+    android:backgroundTint="#C0C0C6"
+    android:text="Register Here" />
+
+
+</RelativeLayout>

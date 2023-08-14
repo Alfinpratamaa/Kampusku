@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".AddActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarRlAdd"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Data"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/backBtn"
+            android:textColor="@color/white_secondary"
+            android:textSize="24sp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_back_white" />
+
+        </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiNpmLayout"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRlAdd"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:endIconMode="clear_text"
+        app:boxStrokeColor="@color/primary"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiNpm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray"
+            android:hint="npm"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@id/tiNpmLayout"
+        android:id="@+id/tiNamaLayout"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        app:endIconMode="clear_text"
+        app:boxStrokeColor="@color/primary"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/itNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray"
+            android:hint="nama lengkap"
+            android:inputType="textPersonName"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/rbLayour"
+        android:layout_below="@id/tiNamaLayout"
+        android:layout_width="match_parent"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="25dp"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:id="@+id/jkTv"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin :"
+            android:textSize="14sp"/>
+        <RadioGroup
+            android:id="@+id/rbGroup"
+            android:layout_below="@id/jkTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="laki-laki"/>
+            <RadioButton
+                android:id="@+id/rbP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perempuan"/>
+
+        </RadioGroup>
+    </RelativeLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@id/rbLayour"
+        android:id="@+id/tiTanggalLahirLayout"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        app:boxStrokeColor="@color/primary"
+        app:endIconMode="clear_text"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiTanggalLahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray"
+            android:hint="tanggal lahir"
+            android:inputType="datetime"
+            android:focusable="false"
+            android:onClick="showDatePicker"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@id/tiTanggalLahirLayout"
+        android:id="@+id/tiAlamatLayout"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        app:boxStrokeColor="@color/primary"
+        app:endIconMode="clear_text"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gray"
+            android:hint="alamat"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_below="@id/tiAlamatLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white_secondary"
+        android:backgroundTint="@color/primary"
+        android:text="Save" />
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_below="@id/btnSave"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:text="cancel" />
+
+
+</RelativeLayout>

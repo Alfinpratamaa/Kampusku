@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".DashboardActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02">
+
+        <ImageButton
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="80dp"
+            android:layout_toStartOf="@+id/dashboard"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_info" />
+
+        <TextView
+            android:id="@+id/dashboard"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textStyle="bold"
+            android:textColor="@color/white_secondary"
+            android:textSize="24sp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+        <ImageButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_logout_white" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_alignEnd="@id/recycleview"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarRl"
+        tools:listitem="@layout/items"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/recycleview"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="26dp"
+        android:backgroundTint="#90CAF9"
+        android:layout_marginBottom="25dp"
+        app:rippleColor="@color/white_secondary"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+
+</RelativeLayout>

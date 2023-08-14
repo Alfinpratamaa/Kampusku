@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".InformationActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_toolbar01">
+
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:id="@+id/backBtn"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="49dp"
+            android:layout_toStartOf="@+id/headlineInformation"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/headlineInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Tentang Aplikasi Ini"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white_secondary"
+            android:textStyle="normal"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cardContent"
+        android:layout_width="340dp"
+        android:layout_height="500dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/shape_edittext01">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textStyle="italic"
+        android:layout_marginTop="100dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:text="Aplikasi Kampusku adalah aplikasi untuk mendata mahasiswa , aplikasi ini dibuat menggunakan Sqlite untuk dabasenya"
+        android:fontFamily="sans-serif-black"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
